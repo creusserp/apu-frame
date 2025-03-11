@@ -1,0 +1,41 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Scenario",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "behavex",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PIPENV_ACTIVE": "1"
+            },
+            "args": [
+                "-t=RUN",
+                "-D browser=chrome"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "python": "python3"
+        },
+        {
+            "name": "Run Scenario - Headless",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "behavex",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PIPENV_ACTIVE": "1"
+            },
+            "args": [
+                "-t=RUN",
+                "-D browser=chrome",
+                "-D headless_browser=true"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "python": "python3"
+        }
+
+    ]
+}

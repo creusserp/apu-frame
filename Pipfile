@@ -1,0 +1,32 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[[source]]
+url = "https://test.pypi.org/simple/"
+verify_ssl = true
+name = "testpypi"
+
+[[source]]
+url = "https://test.pypi.org/simple"
+verify_ssl = true
+name = "testpypi-891"
+
+[packages]
+webdriver-manager = "==3.5.0"
+selenium = "==3.141.0"
+numpy = "==1.23.3"
+pre-commit = "==3.5.0"
+urllib3 = ">=1.26.15,<2"
+debugpy = "*"
+pandas = "2.0.3"
+behavex = "==4.1.0"
+behavex-images = {version="3.0.1", index="testpypi"}
+behaving= "==3.0.4"
+python-dotenv = "==0.19.1"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
