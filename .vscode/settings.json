@@ -1,8 +1,0 @@
-{
-    "cursor.aipreview.enabled": true,
-    "workbench.tree.indent": 24,
-    "bdd-gotostep.include": "features/steps/**/*.py",
-    "bdd-gotostep.exclude": "features/steps/*.feature"
-}
-
-
