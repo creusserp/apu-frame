@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite time="36.0689480304718" tests='2' skipped='0'
+name="Login" failures='0' errors='0'><testcase time="12.959343671798706" name="I_Can_Login_Into_The_Tools_Qa_Page_With_An_Existing_User_And_Correct_Password" status="passed"
+         classname="Login"><system-out>
+            <![CDATA[
+            @scenario.begin
+                @RUN
+                scenario: I can login into the Tools QA page with an existing user and correct password
+                given I open the Tools QA page ... Status.passed in 10.67s 
+                when I complete the user name field with testing user name ... Status.passed in 0.08018s 
+                when I complete the password field with testing user password ... Status.passed in 0.06597s 
+                when I click the Login button ... Status.passed in 2.107s 
+                then I see the "profile" page is displayed ... Status.passed in 0.004214s 
+                then I see the user name is displayed in the page ... Status.passed in 0.0319s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="23.109604358673096" name="After_Login_I_Can_See_The_Elements_Menu_And_Click_On_Text_Box_Option" status="passed"
+         classname="Login"><system-out>
+            <![CDATA[
+            @scenario.begin
+                @RUN
+                scenario: After login I can see the "Elements" menu and click on "Text Box" option
+                given I open the Tools QA page ... Status.passed in 19.68s 
+                when I complete the user name field with testing user name ... Status.passed in 0.0742s 
+                when I complete the password field with testing user password ... Status.passed in 0.06564s 
+                when I click the Login button ... Status.passed in 3.143s 
+                when I expand "Elements" menu ... Status.passed in 0.06755s 
+                when I click "Text Box" option ... Status.passed in 0.0767s 
+                then I see the "Text Box" page is displayed ... Status.passed in 0.004014s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase></testsuite>

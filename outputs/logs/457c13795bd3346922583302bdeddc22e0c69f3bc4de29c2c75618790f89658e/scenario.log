@@ -1,0 +1,21 @@
+﻿16:21:12 - INFO - ----------------------------------------
+16:21:12 - INFO - STEP: I open the Tools QA page
+16:21:12 - INFO - ----------------------------------------
+16:21:12 - INFO - STEP: browser "chrome"
+16:21:14 - INFO - ----------------------------------------
+16:21:14 - INFO - STEP: I set browser size to 1400x900
+16:21:14 - INFO - Browser size has been changed to 1400x900
+16:21:23 - INFO - Login page opened
+16:21:23 - INFO - ----------------------------------------
+16:21:23 - INFO - STEP: I complete the user name field with testing user name
+16:21:23 - INFO - ----------------------------------------
+16:21:23 - INFO - STEP: I complete the password field with testing user password
+16:21:24 - INFO - ----------------------------------------
+16:21:24 - INFO - STEP: I click the Login button
+16:21:26 - INFO - ----------------------------------------
+16:21:26 - INFO - STEP: I see the "profile" page is displayed
+16:21:26 - INFO - Current url is the profile url
+16:21:26 - INFO - ----------------------------------------
+16:21:26 - INFO - STEP: I see the user name is displayed in the page
+16:21:26 - INFO - User name displayed: 'aframe'
+16:21:26 - INFO - User name is displayed in profile page

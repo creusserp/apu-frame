@@ -1,0 +1,21 @@
+﻿16:21:27 - INFO - ----------------------------------------
+16:21:27 - INFO - STEP: I open the Tools QA page
+16:21:27 - INFO - ----------------------------------------
+16:21:27 - INFO - STEP: browser "chrome"
+16:21:28 - INFO - ----------------------------------------
+16:21:28 - INFO - STEP: I set browser size to 1400x900
+16:21:28 - INFO - Browser size has been changed to 1400x900
+16:21:46 - INFO - Login page opened
+16:21:47 - INFO - ----------------------------------------
+16:21:47 - INFO - STEP: I complete the user name field with testing user name
+16:21:47 - INFO - ----------------------------------------
+16:21:47 - INFO - STEP: I complete the password field with testing user password
+16:21:47 - INFO - ----------------------------------------
+16:21:47 - INFO - STEP: I click the Login button
+16:21:51 - INFO - ----------------------------------------
+16:21:51 - INFO - STEP: I expand "Elements" menu
+16:21:51 - INFO - ----------------------------------------
+16:21:51 - INFO - STEP: I click "Text Box" option
+16:21:51 - INFO - ----------------------------------------
+16:21:51 - INFO - STEP: I see the "Text Box" page is displayed
+16:21:51 - INFO - Current url is the text-box url
