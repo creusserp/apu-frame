@@ -38,8 +38,8 @@ jobs:
       - name: Deploy report to GitHub Pages
         if: always()
         run: |
-          git config --global user.email "you@example.com"
-          git config --global user.name "Your Name"
+          git config --global user.email "creusserp@gmail.com"
+          git config --global user.name "creusserp"
           git fetch origin gh-pages
           git worktree add gh-pages gh-pages
           cp output/report.html gh-pages/report.html
