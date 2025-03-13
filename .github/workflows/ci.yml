@@ -35,6 +35,19 @@ jobs:
         run: |
           pipenv run behavex -D browser="$BROWSER" -D headless_browser=true --define APP_URL="${APP_URL}" --define USERNAME="${USER_NAME}" --define PASSWORD="${PASSWORD}"
 
+      - name: Deploy report to GitHub Pages
+        if: always()
+        run: |
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
+          git fetch origin gh-pages
+          git worktree add gh-pages gh-pages
+          cp output/report.html gh-pages/report.html
+          cd gh-pages
+          git add report.html
+          git commit -m "Update test report"
+          git push origin gh-pages
+      
       - name: Store Behave Test Results
         if: always()
         uses: actions/upload-artifact@v4
