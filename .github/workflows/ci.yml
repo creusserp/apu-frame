@@ -45,8 +45,8 @@ jobs:
           git clone https://x-access-token:${GH_PAT}@github.com/creusserp/apu-frame.git gh-pages
           cd gh-pages
           git checkout gh-pages || git checkout --orphan gh-pages
-          cp ../output/report.html report.html
-          git add report.html
+          cp -r ../output/* .
+          git add .
           git commit -m "Update test report"
           git push origin gh-pages
       
