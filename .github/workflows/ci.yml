@@ -1,0 +1,53 @@
+name: Run Tests
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    env:
+      APP_URL: "https://demoqa.com/"
+      USER_NAME: aframe
+      USER_PASSWORD: ${{ secrets.PASSWORD }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+     
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+            python-version: 3.8
+
+      - name: Install pipenv
+        run: |
+          python -m pip install --upgrade pip
+          pip install pipenv
+    
+      - name: Install dependencies
+        run: |
+          pipenv install --dev  # Install dependencies from Pipfile.lock
+   
+      - name: Run tests in Chrome
+        env:
+          BROWSER: chrome
+        run: |
+          pipenv run behavex -D browser="$BROWSER" -D headless_browser=true --define BASE_URL="${BASE_URL}" --define USERNAME="${USERNAME}" --define PASSWORD="${PASSWORD}"
+
+      - name: Store Behave Test Results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: behave-results
+          path: output/behave
+
+      - name: Store All Artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: all-artifacts
+          path: output
+          
+          
+    
