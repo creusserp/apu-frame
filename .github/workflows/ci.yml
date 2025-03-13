@@ -9,7 +9,7 @@ jobs:
     env:
       APP_URL: "https://demoqa.com/"
       USER_NAME: aframe
-      USER_PASSWORD: ${{ secrets.PASSWORD }}
+      PASSWORD: ${{ secrets.PASSWORD }}
 
     steps:
       - name: Checkout code
@@ -33,7 +33,7 @@ jobs:
         env:
           BROWSER: chrome
         run: |
-          pipenv run behavex -D browser="$BROWSER" -D headless_browser=true --define BASE_URL="${BASE_URL}" --define USERNAME="${USERNAME}" --define PASSWORD="${PASSWORD}"
+          pipenv run behavex -D browser="$BROWSER" -D headless_browser=true --define APP_URL="${APP_URL}" --define USERNAME="${USER_NAME}" --define PASSWORD="${PASSWORD}"
 
       - name: Store Behave Test Results
         if: always()
