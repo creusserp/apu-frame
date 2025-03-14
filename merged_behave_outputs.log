@@ -1,6 +1,5 @@
 Feature: Login # features/login.feature:2
 
-  @RUN
   Scenario: I can login into the Tools QA page with an existing user and correct password  # features/login.feature:6
     Given I open the Tools QA page                                                         # features/steps/common_steps.py:17
     When I complete the user name field with testing user name                             # features/steps/login_steps.py:11
@@ -9,7 +8,6 @@ Feature: Login # features/login.feature:2
     Then I see the "profile" page is displayed                                             # features/steps/common_steps.py:52
     And I see the user name is displayed in the page                                       # features/steps/profile_steps.py:14
 
-  @RUN
   Scenario: After login I can see the "Elements" menu and click on "Text Box" option  # features/login.feature:16
     Given I open the Tools QA page                                                    # features/steps/common_steps.py:17
     When I complete the user name field with testing user name                        # features/steps/login_steps.py:11
@@ -18,4 +16,11 @@ Feature: Login # features/login.feature:2
     And I expand "Elements" menu                                                      # features/steps/common_steps.py:40
     And I click "Text Box" option                                                     # features/steps/common_steps.py:46
     Then I see the "Text Box" page is displayed                                       # features/steps/common_steps.py:52
+
+Feature: Api # features/apis.feature:2
+
+  @RUN
+  Scenario: I can login Tools QA page through the API  # features/apis.feature:6
+    Given I login to demoqa page through API           # features/steps/admin_steps.py:13
+    Then I see the response contains the access token  # features/steps/admin_steps.py:32
 
