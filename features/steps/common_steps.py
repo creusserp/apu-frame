@@ -17,25 +17,31 @@ from features.steps.pages.text_box_page import TextboxPage as TB
 @step(u'I open the Tools QA page')
 def open_main_page(context):
     """Initializes the browser and opens the Tools QA Login page"""
-    app_url = get_app_url(context)
-    context.execute_steps(
-        """
-            Given browser "{}"
-            And I set browser size to 1400x900
-        """.format(
-            context.default_browser))
-    login_page = LoginPage(context.browser.driver, app_url)
-    login_page.open_tools_qa_login_page()
-    context.current_page = login_page
+    
+    browser = context.playwright.chromium.launch(
+            headless = context.headless,
+            args=context.browser_args        )
+    context.browser_context = browser.new_context()
+    context.page = context.browser_context.new_page()
 
+    set_browser_window_size(context, "1400x900")
+    context.browser = browser
+  
+    app_url = get_app_url(context)
+
+    context.page.goto(app_url)
+    context.current_page = LoginPage(context.page, app_url)
+    context.current_page.open_tools_qa_login_page()
+    
 
 @step(u'I set browser size to {size}')
 def set_browser_window_size(context, size):
     """Set browser to the specified screen resolution"""
     split_size = size.split('x')
-    for browser_selected in context.browsers.values():
-        browser_selected.driver.set_window_size(split_size[0], split_size[1])
-        logging.info('Browser size has been changed to {0}x{1}'.format(split_size[0], split_size[1]))
+    width, height = int(split_size[0]), int(split_size[1])
+    context.page.set_viewport_size({"width": width, "height": height})
+    logging.info('Browser size has been changed to {0}x{1}'.format(width, height))
+
 
 @step(u'I expand "{element}" menu')
 def expand_menu_panel(context, element):

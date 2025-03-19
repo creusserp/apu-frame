@@ -6,35 +6,37 @@ The other page object classes should inherit from this class.
 
 """
 
-from features.steps.pages.web_utils import WebUtils
-from selenium.webdriver.common.by import By
+from playwright.sync_api import Page
 
 
 class BasePage:
     app_url = None
 
-    menu_text = (By.XPATH, "//div[contains(text(),'Elements')]")
-    menu_option_text = (By.XPATH, "//span[contains(text(),'Text Box')]")
-  
+    menu_text = "//div[contains(text(),'Elements')]"  # XPath for the "Elements" menu
+    menu_option_text = "//span[contains(text(),'Text Box')]"  # XPath for the "Text Box" option
 
-    def __init__(self, driver):
-        self.driver = driver
-        self.web_utils = WebUtils(driver)
+
+    def __init__(self, page: Page):
+        self.page = page
 
     def get_current_url(self):
-        return self.driver.current_url
+        """Return the current URL."""
+        return self.page.url
     
     def expand_panel_menu(self, menu):
+        """Expand the specified menu panel."""
         if BasePage.app_url:
             if menu == "Elements":
-                menu_element = self.web_utils.find_element(*self.menu_text)
-                self.web_utils.safe_click(menu_element)
+                menu_element = self.page.locator(self.menu_text)
+                menu_element.click()  # Click the menu element
 
     def click_panel_menu_option(self, option):
+        """Click the specified menu option."""
         if BasePage.app_url:
-            if option  == "Text Box":
-                option_element = self.web_utils.find_element(*self.menu_option_text)
-                self.web_utils.safe_click(option_element)
+            # NOTE: This if statement currently handles only the "Text Box" option.
+            #Additional options can be added here in the future as needed.
+            if option == "Text Box":
+                option_element = self.page.locator(self.menu_option_text)
+                option_element.click()  # Click the menu option
                 from features.steps.pages.text_box_page import TextboxPage
-                return TextboxPage(self.driver)
-            
+                return TextboxPage(self.page)

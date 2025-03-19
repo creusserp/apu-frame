@@ -4,8 +4,9 @@ import os
 
 from behavex_images import extend_environment as bxi_env
 from behaving.web import environment as bng_env
-from selenium import webdriver
+
 from dotenv import load_dotenv
+from playwright.sync_api import sync_playwright
 
 
 load_dotenv()
@@ -14,6 +15,9 @@ def before_all(context):
     if all(
         env_var in os.environ for env_var in ["APP_URL", "USER_NAME", "PASSWORD"]
     ):
+        playwright = sync_playwright().start()
+        context.playwright = playwright
+        
         app_url = os.getenv("APP_URL")
         user_name = os.getenv("USER_NAME")
         user_password = os.getenv("PASSWORD")
@@ -49,10 +53,10 @@ def before_all(context):
     bxi_env.before_all(context)
 
     # Setting default logging level for selenium for web based tests
-    logger_name = 'selenium.webdriver.remote.remote_connection'
-    selenium_logger = logging.getLogger(logger_name)
-    selenium_logger.propagate = False
-    selenium_logger.setLevel(logging.WARNING)
+    #logger_name = 'selenium.webdriver.remote.remote_connection'
+    #selenium_logger = logging.getLogger(logger_name)
+    #selenium_logger.propagate = False
+    #selenium_logger.setLevel(logging.WARNING)
 
 def before_feature(context, feature):
     bng_env.before_feature(context, feature)
@@ -67,12 +71,11 @@ def before_scenario(context, scenario):
             run_browser_headless_mode(context)
         else:
             run_browser_non_headless_mode(context)
-            if ("options" in context.browser_args
-                    and "--headless" in context.browser_args["options"].arguments):
-                context.browser_args["options"].arguments.remove("--headless")
+     
     print("-" * 40)
     print("Running Scenario: {}".format(scenario.name))
     print("-" * 40)
+    
 
 def before_step(context, step):
     bxi_env.before_step(context, step)
@@ -123,27 +126,12 @@ def after_all(context):
 
 
 def run_browser_headless_mode(context):
-    if "options" in context.browser_args:
-        options = context.browser_args["options"]
-    else:
-        options = set_browser_options(context.default_browser)
-    options.add_argument("--headless")
-    context.browser_args["options"] = options
+    context.headless =  True
+    context.browser_args = ["--start-maximized"]
 
 
 def run_browser_non_headless_mode(context):
-    if "options" in context.browser_args:
-        options = context.browser_args["options"]
-    else:
-        options = set_browser_options(context.default_browser)
-    context.browser_args["options"] = options
+    context.headless =  False
+    context.browser_args = ["--start-maximized"]
+ 
 
-
-def set_browser_options(browser):
-    if 'chrome' in browser:
-        options = webdriver.ChromeOptions()
-    elif 'firefox' in browser:
-        options = webdriver.FirefoxOptions()
-    else:
-        raise Exception("Default browser is not valid. Valid options: Chrome or Firefox")
-    return options
