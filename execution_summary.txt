@@ -1,3 +1,5 @@
+FAILING_SCENARIO: Login: I can login into the Tools QA page with an existing user and correct password
 EXECUTED_SCENARIO: Login: I can login into the Tools QA page with an existing user and correct password
+FAILING_SCENARIO: Login: After login I can see the "Elements" menu and click on "Text Box" option
 EXECUTED_SCENARIO: Login: After login I can see the "Elements" menu and click on "Text Box" option
 EXECUTED_SCENARIO: Api: I can login Tools QA page through the API
