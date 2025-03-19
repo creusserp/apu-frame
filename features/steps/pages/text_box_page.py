@@ -2,20 +2,21 @@
 This page object contains the elements locators and methods related to the text-box page
 """
 
+import logging
 from urllib.parse import urljoin
-from playwright.sync_api import Page
+
+from selenium.webdriver.common.by import By
 
 from features.steps.pages.base_page import BasePage
 
 
 class TextboxPage(BasePage):
 
-    page_label = "//h1[contains(text(),'Text Box')]"  # XPath for the page label
+    page_label = (By.XPATH, "//h1[contains(text(),'Text Box')]")
 
-    def __init__(self, page: Page):
-        super().__init__(Page)
+    def __init__(self, driver):
+        super().__init__(driver)
     
     def get_page_title(self):
-        """Retrieve the page title."""
-        page_title = self.page.locator(self.page_label).text_content()
+        page_title = self.web_utils.find_element(*self.page_label).text
         return page_title

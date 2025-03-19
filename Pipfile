@@ -15,17 +15,16 @@ name = "testpypi-891"
 
 [packages]
 webdriver-manager = "==3.5.0"
+selenium = "==3.141.0"
 numpy = "==1.23.3"
 pre-commit = "==3.5.0"
 urllib3 = ">=1.26.15,<2"
 debugpy = "*"
 pandas = "2.0.3"
-behave = "==1.2.6"
 behavex = "==4.1.0"
 behavex-images = {version="3.0.1", index="testpypi"}
 behaving= "==3.0.4"
 python-dotenv = "==0.19.1"
-playwright = "*"
 
 [dev-packages]
 
