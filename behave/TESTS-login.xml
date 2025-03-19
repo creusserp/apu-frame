@@ -1,86 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite time="0.02414417266845703" tests='2' skipped='0'
-name="Login" failures='2' errors='0'><testcase time="0.00851750373840332" name="I_Can_Login_Into_The_Tools_Qa_Page_With_An_Existing_User_And_Correct_Password" status="failed"
-         classname="Login"><failure type="Error" message="BrowserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome&#10;                ╔════════════════════════════════════════════════════════════╗&#10;                ║ Looks like Playwright was just installed or updated.       ║&#10;                ║ Please run the following command to download new browsers: ║&#10;                ║                                                            ║&#10;                ║     playwright install                                     ║&#10;                ║                                                            ║&#10;                ║ &lt;3 Playwright Team                                         ║&#10;                ╚════════════════════════════════════════════════════════════╝">
-                        <![CDATA[ Failing step: given I open the Tools QA page ... Status.failed in 0.008518s  Location:Featureslogin.Feature
-                         File "/home/runner/.local/share/virtualenvs/apu-frame-jBQYil_C/lib/python3.8/site-packages/behave/model.py", line 1329, in run
-    match.run(runner.context)
-
-                  File "/home/runner/.local/share/virtualenvs/apu-frame-jBQYil_C/lib/python3.8/site-packages/behave/matchers.py", line 98, in run
-    self.func(context, *args, **kwargs)
-
-                  File "features/steps/common_steps.py", line 21, in open_main_page
-    browser = context.playwright.chromium.launch(
-
-                  File "/home/runner/.local/share/virtualenvs/apu-frame-jBQYil_C/lib/python3.8/site-packages/playwright/sync_api/_generated.py", line 14440, in launch
-    self._sync(
-
-                  File "/home/runner/.local/share/virtualenvs/apu-frame-jBQYil_C/lib/python3.8/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
-    return task.result()
-
-                  File "/home/runner/.local/share/virtualenvs/apu-frame-jBQYil_C/lib/python3.8/site-packages/playwright/_impl/_browser_type.py", line 95, in launch
-    Browser, from_channel(await self._channel.send("launch", params))
-
-                  File "/home/runner/.local/share/virtualenvs/apu-frame-jBQYil_C/lib/python3.8/site-packages/playwright/_impl/_connection.py", line 59, in send
-    return await self._connection.wrap_api_call(
-
-                  File "/home/runner/.local/share/virtualenvs/apu-frame-jBQYil_C/lib/python3.8/site-packages/playwright/_impl/_connection.py", line 520, in wrap_api_call
-    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
-                        ]]>
-                    </failure><system-out>
+<testsuite time="43.47817015647888" tests='2' skipped='0'
+name="Login" failures='0' errors='0'><testcase time="23.71383833885193" name="I_Can_Login_Into_The_Tools_Qa_Page_With_An_Existing_User_And_Correct_Password" status="passed"
+         classname="Login"><system-out>
             <![CDATA[
             @scenario.begin
-                @RUN
+                
                 scenario: I can login into the Tools QA page with an existing user and correct password
-                given I open the Tools QA page ... Status.failed in 0.008518s 
-                when I complete the user name field with testing user name ... Status.skipped in 0.0s 
-                when I complete the password field with testing user password ... Status.skipped in 0.0s 
-                when I click the Login button ... Status.skipped in 0.0s 
-                then I see the "profile" page is displayed ... Status.skipped in 0.0s 
-                then I see the user name is displayed in the page ... Status.skipped in 0.0s 
+                given I open the Tools QA page ... Status.passed in 21.34s 
+                when I complete the user name field with testing user name ... Status.passed in 0.1466s 
+                when I complete the password field with testing user password ... Status.passed in 0.07059s 
+                when I click the Login button ... Status.passed in 2.119s 
+                then I see the "profile" page is displayed ... Status.passed in 0.006342s 
+                then I see the user name is displayed in the page ... Status.passed in 0.03314s 
 @scenario.end
             ----------------------------------------------------------------------------------------------------
             ]]>
             </system-out>
-        </testcase><testcase time="0.01562666893005371" name="After_Login_I_Can_See_The_Elements_Menu_And_Click_On_Text_Box_Option" status="failed"
-         classname="Login"><failure type="Error" message="BrowserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome&#10;                ╔════════════════════════════════════════════════════════════╗&#10;                ║ Looks like Playwright was just installed or updated.       ║&#10;                ║ Please run the following command to download new browsers: ║&#10;                ║                                                            ║&#10;                ║     playwright install                                     ║&#10;                ║                                                            ║&#10;                ║ &lt;3 Playwright Team                                         ║&#10;                ╚════════════════════════════════════════════════════════════╝">
-                        <![CDATA[ Failing step: given I open the Tools QA page ... Status.failed in 0.01563s  Location:Featureslogin.Feature
-                         File "/home/runner/.local/share/virtualenvs/apu-frame-jBQYil_C/lib/python3.8/site-packages/behave/model.py", line 1329, in run
-    match.run(runner.context)
-
-                  File "/home/runner/.local/share/virtualenvs/apu-frame-jBQYil_C/lib/python3.8/site-packages/behave/matchers.py", line 98, in run
-    self.func(context, *args, **kwargs)
-
-                  File "features/steps/common_steps.py", line 21, in open_main_page
-    browser = context.playwright.chromium.launch(
-
-                  File "/home/runner/.local/share/virtualenvs/apu-frame-jBQYil_C/lib/python3.8/site-packages/playwright/sync_api/_generated.py", line 14440, in launch
-    self._sync(
-
-                  File "/home/runner/.local/share/virtualenvs/apu-frame-jBQYil_C/lib/python3.8/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
-    return task.result()
-
-                  File "/home/runner/.local/share/virtualenvs/apu-frame-jBQYil_C/lib/python3.8/site-packages/playwright/_impl/_browser_type.py", line 95, in launch
-    Browser, from_channel(await self._channel.send("launch", params))
-
-                  File "/home/runner/.local/share/virtualenvs/apu-frame-jBQYil_C/lib/python3.8/site-packages/playwright/_impl/_connection.py", line 59, in send
-    return await self._connection.wrap_api_call(
-
-                  File "/home/runner/.local/share/virtualenvs/apu-frame-jBQYil_C/lib/python3.8/site-packages/playwright/_impl/_connection.py", line 520, in wrap_api_call
-    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
-                        ]]>
-                    </failure><system-out>
+        </testcase><testcase time="19.764331817626953" name="After_Login_I_Can_See_The_Elements_Menu_And_Click_On_Text_Box_Option" status="passed"
+         classname="Login"><system-out>
             <![CDATA[
             @scenario.begin
-                @RUN
+                
                 scenario: After login I can see the "Elements" menu and click on "Text Box" option
-                given I open the Tools QA page ... Status.failed in 0.01563s 
-                when I complete the user name field with testing user name ... Status.skipped in 0.0s 
-                when I complete the password field with testing user password ... Status.skipped in 0.0s 
-                when I click the Login button ... Status.skipped in 0.0s 
-                when I expand "Elements" menu ... Status.skipped in 0.0s 
-                when I click "Text Box" option ... Status.skipped in 0.0s 
-                then I see the "Text Box" page is displayed ... Status.skipped in 0.0s 
+                given I open the Tools QA page ... Status.passed in 16.34s 
+                when I complete the user name field with testing user name ... Status.passed in 0.08103s 
+                when I complete the password field with testing user password ... Status.passed in 0.07014s 
+                when I click the Login button ... Status.passed in 3.118s 
+                when I expand "Elements" menu ... Status.passed in 0.07729s 
+                when I click "Text Box" option ... Status.passed in 0.07657s 
+                then I see the "Text Box" page is displayed ... Status.passed in 0.004268s 
 @scenario.end
             ----------------------------------------------------------------------------------------------------
             ]]>

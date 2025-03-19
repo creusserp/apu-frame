@@ -1,21 +1,21 @@
-﻿20:44:21 - INFO - ----------------------------------------
-20:44:21 - INFO - STEP: I open the Tools QA page
-20:44:21 - INFO - ----------------------------------------
-20:44:21 - INFO - STEP: browser "chrome"
-20:44:23 - INFO - ----------------------------------------
-20:44:23 - INFO - STEP: I set browser size to 1400x900
-20:44:23 - INFO - Browser size has been changed to 1400x900
-20:44:32 - INFO - Login page opened
-20:44:32 - INFO - ----------------------------------------
-20:44:32 - INFO - STEP: I complete the user name field with testing user name
-20:44:33 - INFO - ----------------------------------------
-20:44:33 - INFO - STEP: I complete the password field with testing user password
-20:44:33 - INFO - ----------------------------------------
-20:44:33 - INFO - STEP: I click the Login button
-20:44:35 - INFO - ----------------------------------------
-20:44:35 - INFO - STEP: I expand "Elements" menu
-20:44:36 - INFO - ----------------------------------------
-20:44:36 - INFO - STEP: I click "Text Box" option
-20:44:36 - INFO - ----------------------------------------
-20:44:36 - INFO - STEP: I see the "Text Box" page is displayed
-20:44:36 - INFO - Current url is the text-box url
+﻿15:43:07 - INFO - ----------------------------------------
+15:43:07 - INFO - STEP: I open the Tools QA page
+15:43:07 - INFO - ----------------------------------------
+15:43:07 - INFO - STEP: browser "chrome"
+15:43:08 - INFO - ----------------------------------------
+15:43:08 - INFO - STEP: I set browser size to 1400x900
+15:43:08 - INFO - Browser size has been changed to 1400x900
+15:43:23 - INFO - Login page opened
+15:43:23 - INFO - ----------------------------------------
+15:43:23 - INFO - STEP: I complete the user name field with testing user name
+15:43:24 - INFO - ----------------------------------------
+15:43:24 - INFO - STEP: I complete the password field with testing user password
+15:43:24 - INFO - ----------------------------------------
+15:43:24 - INFO - STEP: I click the Login button
+15:43:27 - INFO - ----------------------------------------
+15:43:27 - INFO - STEP: I expand "Elements" menu
+15:43:28 - INFO - ----------------------------------------
+15:43:28 - INFO - STEP: I click "Text Box" option
+15:43:28 - INFO - ----------------------------------------
+15:43:28 - INFO - STEP: I see the "Text Box" page is displayed
+15:43:28 - INFO - Current url is the text-box url
