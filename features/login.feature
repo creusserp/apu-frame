@@ -1,8 +1,8 @@
-# Created by pcreusser 03/2025
+# Created by creusserp 03/2025
 Feature: Login
   # This feature is going to be used for all the tests related to login and creation of new accounts
 
-
+  
   Scenario: I can login into the Tools QA page with an existing user and correct password
     Given I open the Tools QA page
     When I complete the user name field with testing user name
@@ -11,8 +11,7 @@ Feature: Login
     Then I see the "profile" page is displayed
     And I see the user name is displayed in the page
 
-
-
+  
   Scenario: After login I can see the "Elements" menu and click on "Text Box" option
     Given I open the Tools QA page
     When I complete the user name field with testing user name
