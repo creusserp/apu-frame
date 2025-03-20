@@ -1,11 +1,21 @@
-﻿14:52:29 - INFO - ----------------------------------------
-14:52:29 - INFO - STEP: I open the Tools QA page
-14:52:29 - ERROR - BrowserType.launch: Executable doesn't exist at /home/runner/.cache/ms-playwright/chromium-1140/chrome-linux/chrome
-╔════════════════════════════════════════════════════════════╗
-║ Looks like Playwright was just installed or updated.       ║
-║ Please run the following command to download new browsers: ║
-║                                                            ║
-║     playwright install                                     ║
-║                                                            ║
-║ <3 Playwright Team                                         ║
-╚════════════════════════════════════════════════════════════╝
+﻿02:11:47 - INFO - ----------------------------------------
+02:11:47 - INFO - STEP: I open the Tools QA page
+02:11:47 - INFO - ----------------------------------------
+02:11:47 - INFO - STEP: browser "chrome"
+02:11:48 - INFO - ----------------------------------------
+02:11:48 - INFO - STEP: I set browser size to 1400x900
+02:11:48 - INFO - Browser size has been changed to 1400x900
+02:11:51 - INFO - Login page opened
+02:11:51 - INFO - ----------------------------------------
+02:11:51 - INFO - STEP: I complete the user name field with testing user name
+02:11:52 - INFO - ----------------------------------------
+02:11:52 - INFO - STEP: I complete the password field with testing user password
+02:11:52 - INFO - ----------------------------------------
+02:11:52 - INFO - STEP: I click the Login button
+02:11:55 - INFO - ----------------------------------------
+02:11:55 - INFO - STEP: I expand "Elements" menu
+02:11:56 - INFO - ----------------------------------------
+02:11:56 - INFO - STEP: I click "Text Box" option
+02:11:56 - INFO - ----------------------------------------
+02:11:56 - INFO - STEP: I see the "Text Box" page is displayed
+02:11:56 - INFO - Current url is the text-box url

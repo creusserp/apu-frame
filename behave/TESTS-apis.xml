@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite time="0.9164049625396729" tests='1' skipped='0'
-name="Apis" failures='0' errors='0'><testcase time="0.9164049625396729" name="I_Can_Login_Tools_Qa_Page_Through_The_Api" status="passed"
+<testsuite time="1.1065375804901123" tests='1' skipped='0'
+name="Apis" failures='0' errors='0'><testcase time="1.1065375804901123" name="I_Can_Login_Tools_Qa_Page_Through_The_Api" status="passed"
          classname="Api"><system-out>
             <![CDATA[
             @scenario.begin
-                @RUN
+                
                 scenario: I can login Tools QA page through the API
-                given I login to demoqa page through API ... Status.passed in 0.9161s 
-                then I see the response contains the access token ... Status.passed in 0.0002711s 
+                given I login to demoqa page through API ... Status.passed in 1.106s 
+                then I see the response contains the access token ... Status.passed in 0.0001993s 
 @scenario.end
             ----------------------------------------------------------------------------------------------------
             ]]>
