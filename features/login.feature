@@ -11,7 +11,6 @@ Feature: Login
     Then I see the "profile" page is displayed
     And I see the user name is displayed in the page
 
-  
   Scenario: After login I can see the "Elements" menu and click on "Text Box" option
     Given I open the Tools QA page
     When I complete the user name field with testing user name
