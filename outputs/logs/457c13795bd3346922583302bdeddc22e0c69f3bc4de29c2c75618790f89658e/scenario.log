@@ -1,21 +1,21 @@
-﻿02:11:25 - INFO - ----------------------------------------
-02:11:25 - INFO - STEP: I open the Tools QA page
-02:11:25 - INFO - ----------------------------------------
-02:11:25 - INFO - STEP: browser "chrome"
-02:11:37 - INFO - ----------------------------------------
-02:11:37 - INFO - STEP: I set browser size to 1400x900
-02:11:37 - INFO - Browser size has been changed to 1400x900
-02:11:41 - INFO - Login page opened
-02:11:42 - INFO - ----------------------------------------
-02:11:42 - INFO - STEP: I complete the user name field with testing user name
-02:11:42 - INFO - ----------------------------------------
-02:11:42 - INFO - STEP: I complete the password field with testing user password
-02:11:43 - INFO - ----------------------------------------
-02:11:43 - INFO - STEP: I click the Login button
-02:11:46 - INFO - ----------------------------------------
-02:11:46 - INFO - STEP: I see the "profile" page is displayed
-02:11:46 - INFO - Current url is the profile url
-02:11:46 - INFO - ----------------------------------------
-02:11:46 - INFO - STEP: I see the user name is displayed in the page
-02:11:46 - INFO - User name displayed: 'aframe'
-02:11:46 - INFO - User name is displayed in profile page
+﻿15:04:37 - INFO - ----------------------------------------
+15:04:37 - INFO - STEP: I open the Tools QA page
+15:04:37 - INFO - ----------------------------------------
+15:04:37 - INFO - STEP: browser "chrome"
+15:04:39 - INFO - ----------------------------------------
+15:04:39 - INFO - STEP: I set browser size to 1400x900
+15:04:39 - INFO - Browser size has been changed to 1400x900
+15:04:50 - INFO - Login page opened
+15:04:50 - INFO - ----------------------------------------
+15:04:50 - INFO - STEP: I complete the user name field with testing user name
+15:04:50 - INFO - ----------------------------------------
+15:04:50 - INFO - STEP: I complete the password field with testing user password
+15:04:51 - INFO - ----------------------------------------
+15:04:51 - INFO - STEP: I click the Login button
+15:04:53 - INFO - ----------------------------------------
+15:04:53 - INFO - STEP: I see the "profile" page is displayed
+15:04:53 - INFO - Current url is the profile url
+15:04:53 - INFO - ----------------------------------------
+15:04:53 - INFO - STEP: I see the user name is displayed in the page
+15:04:53 - INFO - User name displayed: 'aframe'
+15:04:53 - INFO - User name is displayed in profile page
